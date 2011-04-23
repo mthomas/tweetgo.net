@@ -1,0 +1,72 @@
+li .ctrls			{ display: none;  }
+li.active .ctrls	{ display: block; }
+
+.ctrls ul,
+.ctrls li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ctrls,
+.ctrls ul,
+.ctrls li {
+	float: left;
+}
+
+.ctrls {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	right: 2%;
+	
+	border-top:0;
+	border-right: 0;
+	
+	margin-bottom: -92px;
+}
+
+.ctrls ul {
+	margin: 10px 0 10px 10px;
+}
+
+.ctrls ul li.ctrl {
+	height: 70px;
+	width: 70px;
+	overflow: hidden;
+	display:block;
+	margin: 0 5px !important;
+}
+
+.ctrls:last-child li.ctrl {
+	margin-right: 0;
+}
+
+.ctrls li {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.ctrls li a.ctrl {
+	display: block;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	text-indent: -999px;
+	background: url('./img/ctrls1.0.png') no-repeat center -46px;
+}
+
+.is_fave .ctrls li a.ctrl
+{
+	background-position: center -739px;
+}
+
+.status li:first-child a.ctrl {
+	background-position: center 20px !important;
+	border-left: 0;
+}
+
+.status li:last-child a.ctrl {
+	background-position: center -109px !important;
+	border-right: 0;
+}

@@ -1,0 +1,73 @@
+<%@ Import Namespace="Bundler.Framework"%>
+<%@ Import Namespace="mobile_twitter"%>
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="Head1" runat="server">
+	<meta charset="utf-8">
+
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    
+    <%= Bundle.Css()
+        .Add("~/resources/metro/reset.css")
+        .Add("~/resources/metro/typography.css")
+        .Add("~/resources/metro/navigation.css")
+        .Add("~/resources/metro/ctrls.css")
+        .Add("~/resources/metro/timeline.css")
+        .Add("~/resources/metro/user.css")
+        .Add("~/resources/metro/lists.css")
+        .Add("~/resources/metro/forms.css")
+        .Add("~/resources/metro/dialog.css")
+        .Add("~/resources/metro/base.css")
+        .Add("~/resources/metro/colors.css")
+        .Render("~/resources/metro/site.css") %>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="ctnr">
+        <% Html.RenderPartial("Preamble"); %>
+        
+        <div class="n">
+           <ul>
+                <li <%= (string)ViewData["Action"] == "Index" ? "class='current_menu_item hm'" : "class='hm'" %>><%=Html.ActionLink("Home", "Index", "Home", null, new { @class = "hm", name="top" })%></li>
+                <li <%= (string)ViewData["Action"] == "Mentions" ? "class='current_menu_item mn'" : "class='mn'" %> ><%=Html.ActionLink("Mentions", "Mentions", "Home", null, new { @class = "mn" })%></li>
+                <li <%= ViewContext.RouteData.GetRequiredString("Controller").ToLower() == "lists"  ? "class='current_menu_item li'" : "class='li'" %>><%=Html.ActionLink("Lists", "Index", "Lists", null, new { @class = "li" })%></li>
+                <li <%= ViewContext.RouteData.GetRequiredString("Controller").ToLower() == "messages"  ? "class='current_menu_item dm'" : "class='dm'" %>><%=Html.ActionLink("Inbox", "Inbox", "Messages", null, new { @class = "dm" })%></li>
+                <li <%= ViewContext.RouteData.GetRequiredString("Controller").ToLower() == "search"  ? "class='current_menu_item se'" : "class='se'" %>><%=Html.ActionLink("Search", "Index", "Search", null, new { @class = "se" })%></li>
+                <li class='co'><a href="<%= ViewContext.RouteData.GetRequiredString("Controller").Equals("home", StringComparison.OrdinalIgnoreCase) ? "#" : "/?compose=true"%>" class="co">compose</a></li>
+            </ul>
+        </div>
+        
+        <div id="cnt">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+         
+        <div id="footer">            
+            <p id="rateLimitingStatus"></p>
+            <h1><%=Settings.LogoMarkup %></h1>
+        </div>        
+        
+        <div class="footer_nav">
+            <ul>
+                <li><a href="#top" class="tp">top</a></li>
+                <li><a href="/favorites/">favorites</a></li>
+                <li><a href="/authenticate/logout/">log out</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    
+    <asp:ContentPlaceHolder ID="Scripts" runat="server"></asp:ContentPlaceHolder>
+    <div style="height: 0px; overflow: hidden;">
+    <%=Html.GoogleAnalyticsImage()%>
+    </div>
+</body>
+</html>

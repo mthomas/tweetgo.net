@@ -1,0 +1,81 @@
+﻿@foreground_color: #ffffff;
+@foreground_accent: #999999;
+
+@accent_color: #1ba1e2;
+
+@background_color: #1f1f1f;
+@background_offset: #2f2f2f;
+
+/* TYPOGRAPHY */
+span.tweet {
+	color: @accent_color;
+}
+
+strong.go {
+	color: @foreground_color;
+}
+
+em.net {
+	color: @foreground_accent;
+}
+
+a {
+	color: @accent_color; 
+}
+
+/* BASE */
+body
+{
+	background: @background_color; 
+	color: @foreground_color;k
+}
+
+input[type=text], input[type=button], button, textarea, input[type=submit]{
+	background: @background_offset;
+	color: @foreground_color;
+}
+
+#footer {
+	color: @foreground_accent;
+}
+
+/* TIMELINE */
+#t .divider{
+	border-top-color: @background_offset;
+}
+
+span.meta{
+	color: @foreground_accent;
+}
+
+#t li.active {
+	background: @background_offset;
+}
+
+#newTweets{
+	background: @background_offset;
+}
+
+.is_fave .fave_star {
+	color: Yellow;
+}
+
+/* NAVIGATION */
+div.n, div.footer_nav {
+	background: black;
+}
+
+.current_menu_item
+{
+	background: @background_color;
+}
+
+.footer_nav li a 
+{
+	color: @foreground_color;
+}
+
+/* CONTROLS */
+.ctrls li{
+	background: @background_color;
+}

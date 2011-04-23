@@ -1,0 +1,78 @@
+/* -------------------------------------------------------------- 
+   
+   typography.css
+   * Sets up some sensible default typography.
+   tweetgo.net, v2 wireframing; rev 1.0
+  
+-------------------------------------------------------------- */
+
+/* This is where you set your desired font size. The line-heights 
+   and vertical margins are automatically calculated from this. 
+   The percentage is of 16px (0.75 * 16px = 12px). */
+body  
+{
+	font-size: 120%; 
+}
+
+
+/* Default fonts and colors. */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea  
+{
+	font-family: Segoe UI, Helvetica, Lucida Grande, Lucida Sans, Arial, sans-serif; 
+}
+
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; }
+
+h1 { 
+	font-size: 2em; 
+	line-height: 1; 
+	margin-bottom: 0.5em; 
+	text-align: right;	
+}
+
+#public_home h1
+{
+	text-align: left;
+}
+
+em.net {
+	font-style: normal;
+}
+
+
+
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; margin-top: 1em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; margin-bottom: 1.5em; }
+h6 { font-size: 1em; }
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p { margin: 0 0 1.5em; }
+
+ul, ol { margin: 0 1.5em 1.5em 1.5em; }
+ul { list-style-type: circle; }
+ol { list-style-type: decimal; }
+
+dl { margin: 0 0 1.5em 0; }
+dl dt { font-weight: bold; }
+dl dd { margin-left: 1.5em; }
+
+abbr, acronym { border-bottom: 1px dotted #000; }
+address { margin-top: 1.5em; font-style: italic; }
+del { color: #000; }
+
+a {
+	text-decoration: none; 
+}
+a:hover { text-decoration: underline; }
+
+blockquote { margin: 1.5em; }
+strong { font-weight: bold;  }
+em, dfn { font-style: italic; }

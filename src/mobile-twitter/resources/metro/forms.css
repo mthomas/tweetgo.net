@@ -1,0 +1,43 @@
+﻿#update_form {
+	position: relative;
+	display: none;
+	margin-bottom: 1em;
+	height:120px;
+}
+
+#update_form textarea, #message_form textarea {
+	width: 73%;
+	height: 120px;
+	float: left;
+	clear: left;
+}
+
+#update_form button, #message_form button{
+	width: 25%;
+	height: 120px;
+	margin: 0;
+	float: right;
+}
+
+#update_form #char_count {
+	position:absolute;
+	bottom: 10px;
+	right: 0;
+	margin-right: 10px;
+}
+
+#message_form input, #q {
+	margin: 0 0 10px 0;
+	width: 100%;
+}
+
+#search { /*search button*/
+	margin: 0;
+	width: 100%;
+}
+
+#more, #load_more {
+	width: 100%;
+	margin: 1em 0;
+	text-transform: lowercase;
+}

@@ -1,0 +1,81 @@
+﻿
+/* timeline
+-------------------------------------------------------- */
+#t {
+	clear: both;
+}
+
+#t li.status, #loading_tweets, #loading_more {
+	position: relative;
+	display: block;
+	clear: both;
+	
+	padding: .5em 2%;
+	margin: 0 -2%;
+}
+
+#t .divider {
+	clear: both;
+	
+	margin: .5em 0;
+	padding: 0;
+	
+	border-top: solid 1px;
+	z-index: 9000;
+}
+
+span.img {
+	position: absolute;
+	display: block;
+	top: 1em;
+}
+
+span.img img {
+	width: 73px;
+	height: 73px;
+}
+
+span.twt {
+	display: block;
+	margin-left: 92px;	
+}
+
+.no_profileImage span.twt {
+	margin-left: 0;
+}
+
+span.twt p {
+	margin: .25em 0 .5em 0;
+}
+
+span.meta {
+	display: block;
+	clear: both;
+	
+	margin: 0;
+	font-size: .8em;
+}
+
+span.reply_text {
+	display: block;
+	margin: 0 0 1em 2em;
+}
+
+.twt strong {
+	display: block;
+	font-size: 1.4em;
+	font-weight: normal;
+}
+
+#newTweets {
+	margin: 0 -2% .5em -2%;
+	padding: .5em 1em;
+}
+
+.fave_star {
+	display: none;
+}
+
+.is_fave .fave_star {
+	display: inline;
+}

@@ -1,0 +1,18 @@
+Quickstart
+
+* Clone git repo
+* Get a Twitter OAUTH API Key and Secret
+* Create a file called oauth.config in the /mobile-twitter/ directory
+** The file should be a single line containing your key and secret separated by a / -- for example
+   MYKEY/MYSECRET
+* Create a hosts file entry to point your API Key's domain to your local machine
+* Run the project!
+
+Production Deployments
+* Create your own validation and decryption keys in the Web.config
+* Update the SigningKey in CookieTempDataProvider.cs
+* Create new IV and Salt in Encryptor.cs
+* Create new SigningKey and EncryptingKey in AuthenticationService.cs
+* Update AnalyticsHelper.cs with a GA account ID
+* Create new Twitter API keys for the production deployment
+* Create a folder for error logging (by default: c:\tweetgo-errors\)

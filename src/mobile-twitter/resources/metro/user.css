@@ -1,0 +1,22 @@
+﻿#user {
+	padding: 1em 0 .5em 0;
+}
+
+#user img {
+	float: left;
+	margin-top: .25em;
+}
+
+#user p {
+	margin: 0 0 .5em 95px;
+}
+
+#user p
+{
+	
+}
+
+#user ul
+{
+	list-style-type: none;
+}

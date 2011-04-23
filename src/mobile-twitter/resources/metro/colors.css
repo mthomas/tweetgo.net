@@ -1,0 +1,73 @@
+﻿/* TYPOGRAPHY */
+span.tweet {
+	color: #1ba1e2;
+}
+
+strong.go {
+	color: #ffffff;
+}
+
+em.net {
+	color: #999999;
+}
+
+a {
+	color: #1ba1e2; 
+}
+
+/* BASE */
+body
+{
+	background: #1f1f1f; 
+	color: #ffffff;
+}
+
+input[type=text], input[type=button], button, textarea, input[type=submit]{
+	background: #2f2f2f;
+	color: #ffffff;
+}
+
+#footer {
+	color: #999999;
+}
+
+/* TIMELINE */
+#t .divider{
+	border-top-color: #2f2f2f;
+}
+
+span.meta{
+	color: #999999;
+}
+
+#t li.active {
+	background: #2f2f2f;
+}
+
+#newTweets{
+	background: #2f2f2f;
+}
+
+.is_fave .fave_star {
+	color: Yellow;
+}
+
+/* NAVIGATION */
+div.n, div.footer_nav {
+	background: black;
+}
+
+.current_menu_item
+{
+	background: #1f1f1f;
+}
+
+.footer_nav li a 
+{
+	color: #ffffff;
+}
+
+/* CONTROLS */
+.ctrls li{
+	background: #1f1f1f;
+}
